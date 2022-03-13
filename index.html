@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycle Bin || used things selling platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <p style="background-image: url('img_girl.jpg');"></p>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./images/RB 5@4x.png" alt="" width="150px" height="65px">
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="./images/cart_icon-removebg-preview.png" alt="" height="30px" width="30px">
+                <img src="./images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1 class="glow" id="text3d">Don't Forget The 3R!<br>Reduce,Reuse,Recycle.</h1>
+                    <br>
+                    <p>Life becomes easier when you always remeber these three magical<br> words. Don't worry. Recycle bin is here for remembering you the 3R.<br>Be smart & enjoy your shopping.</p>
+                    <a href="" class="btn">Explore Now &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img class="mySlides" src="./images/Home_bg_2-removebg-preview.png" alt="" width="100%">
+                    <img class="mySlides" src="./images/Home_sample-2-removebg-preview.png" alt="" width="100%">
+                    <!-- <img class="mySlides" src="./images/Second_Hand-removebg-preview.png" alt="" width="100%"> -->
+                </div>
+                <script>
+                    var myIndex = 0;
+                    carousel();
+
+                    function carousel() {
+                        var i;
+                        var x = document.getElementsByClassName("mySlides");
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        myIndex++;
+                        if (myIndex > x.length) { myIndex = 1 }
+                        x[myIndex - 1].style.display = "block";
+                        setTimeout(carousel, 2000); // Change image every 2 seconds
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+    <!--------------featured categories------------>
+    <div class="categories">
+        <div class="small-container">
+            <h2 class="title">Featured Categories</h2>
+            <div class="row">
+                <div class="col-3 cat">
+                    <img src="./images/furniture.jpg" alt="" height="250px" width="300" align="centre">
+                    <h3>Furniture</h3>
+                </div>
+                <div class="col-3 cat">
+                    <img src="./images/cloths.jpg" alt="" height="250px" width="300" align="centre">
+                    <h3 class="return">Cloths</h3>
+                </div>
+                <div class="col-3 cat">
+                    <img src="./images/home-aapliance(2).jpg" alt="" height="250px" width="300" align="centre">
+                    <h3 class="del">Home Appliance</h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------offer------------- -->
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="./images/free-cod-gif.gif" class="offer-img">
+
+                </div>
+                <div class="col-2">
+                    <h2>March's deal...</h2>
+                    <h1>All Over Bangladesh</h1>
+                    <p>This offer will applicable on minimum purchase amount of 500Tk.Enjoy Your shopping.</p>
+                    <a href="" class="btn">Explore Now &#8594;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- --------------featured Products-------- -->
+
+    <div class="small-container fp">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="./images/television.jpg" alt="">
+                <h4>Smart Television</h4>
+                <!-- <div class="rating">
+                    <i class="fa fa-star"></i>
+
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div> -->
+                <p>Price: 13000 Tk.</p>
+            </div>
+            <div class="col-4">
+                <img src="./images/buy-2.jpg" alt="">
+                <h4>Shoes</h4>
+                <!-- <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div> -->
+                <p>Price: 500 Tk.</p>
+            </div>
+            <div class="col-4">
+                <img src="./images/mobile.jpg" alt="">
+                <h4>Smart Phone</h4>
+                <!-- <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div> -->
+                <p>Price: 6000 Tk.</p>
+            </div>
+            <div class="col-4">
+                <img src="./images/Wooden Almirah.jpg" alt="">
+                <h4>Wooden Almirah</h4>
+                <!-- <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div> -->
+                <p>Price: 10000 Tk.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------Latest Products------------- -->
+
+    <div class="container">
+        <h2 class="title">Latest Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="./images/Cycle.jpg" alt="">
+                <h4>Ladies Cycle</h4>
+                <!-- <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                 </div> -->
+                <p>Price: 5000 Tk.</p>
+            </div>
+            <div class="col-4">
+                <img src="./images/dinner set.webp" alt="">
+                <h4>Dinner Set</h4>
+                <!-- <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div> -->
+                <p>Price: 2500 Tk.</p>
+            </div>
+            <div class="col-4">
+                <img src="./images/Reading table.jpg" alt="">
+                <h4>Reading Table</h4>
+                <!-- <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+
+
+
+                </div> -->
+                <p>Price: 1500 Tk.</p>
+            </div>
+            <div class="col-4">
+                <img src="./images/Coffee Maker.jpg" alt="">
+                <h4>Coffee Maker</h4>
+                <!-- <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+
+
+
+                </div> -->
+                <p>Price: 650 Tk.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="./images/Bridal shari.webp" alt="">
+                <h4>Red Bridal Shari</h4>
+                <!-- <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+
+
+
+                </div> -->
+                <p>Price: 3500 Tk.</p>
+            </div>
+            <div class="col-4">
+                <img src="./images/Air Condition.jpg" alt="">
+                <h4>Air Conditionar</h4>
+                <!-- <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+
+
+
+                </div> -->
+                <p>Price: 30000 Tk.</p>
+            </div>
+            <div class="col-4">
+                <img src="./images/Shoes.jpg" alt="">
+                <h4>Gents Shoes</h4>
+                <!-- <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+
+
+
+                </div> -->
+                <p>Price: 450 Tk.</p>
+            </div>
+            <div class="col-4">
+                <img src="./images/panjabi.jpg" alt="">
+                <h4>Men's Panjabi</h4>
+                <!-- <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div> -->
+                <p>Price: 500 Tk.</p>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- -------------------------Our Policy------------------- -->
+    <div class="policy">
+        <div class="small-container">
+            <h2 class="title">Our Policy</h2>
+            <div class="row">
+                <div class="col-3">
+                    <img src="./images/quality-assurance-graphic.png" alt="">
+                    <h3 class="quality">Quality Assurance</h3>
+                </div>
+                <div class="col-3">
+                    <img src="./images/del.gif" alt="">
+                    <h3 class="del">Cash On Delivery</h3>
+                </div>
+                <div class="col-3">
+                    <img src="./images/Returns_x1000.gif" alt="" height="250">
+                    <h3 class="return">Return & Exchange</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------Special Quote----------------- -->
+    <div class="quote">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2 sq">
+                    <img src="./images/2nd hand buy & sell logo.webp" class="offer-img">
+
+                </div>
+                <div class="col-2">
+
+                    <marquee direction="up">
+                        <!-- <h2>"If you buy thing you do not need, soon you will have to sell things you need."<br>-Warren
+                            Buffett</h2> -->
+                            <h2>"You can't buy happiness but you can buy secondhand and that's kind of the same thing..."</h2>
+                    </marquee>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------testimonial----------- -->
+    <div class="testimonial">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Super fast delivery and packaging system was very good.The quality of the product was beyond my expectation.
+                        Overall they provide best service according to the price range.
+                    </p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <img src="./images/Sanjida.jpg" alt="">
+                    <h3>Sneha Biswas</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>If your budget is short but need any product at emergency,You can easily choose Recycle Bin to get the desired things.
+                        Just love their services.They are really trustworthy.
+                    </p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <img src="./images/Somrat.jpg" alt="">
+                    <h3>Saiful Alam</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Their initiative is very good.People can easily purchase used but fresh product at a cheapest price range.I recieved their
+                       services recently & I am fully satisfied.Recommended...
+                    </p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <img src="./images/Sanzida_Promi.jpg" alt="">
+                    <h3>Maria Khanam</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------Brands----------- -->
+
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="./images/logo-coca-cola.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="./images/logo-godrej.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="./images/logo-oppo.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="./images/logo-paypal.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="./images/logo-philips.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------footer------------ -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <!-- <img src="./images/app-store.png" alt=""> -->
+                        <img src="./images/play-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="./images/RB 2@4x.png" alt="">
+                    <p>Our Purpose is to make people economic<br> and make their life esier.
+                    </p>
+
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instragram</li>
+                        <li>Youtube</li>
+                    </ul>
+
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022</p>
+        </div>
+    </div>
+
+    <!-- ---------------Js for toogle Menu------------- -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
