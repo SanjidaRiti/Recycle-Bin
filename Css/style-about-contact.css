@@ -149,7 +149,7 @@ padding:5px;
       border: 1px solid #e1e1e1;
   }
   #contact-details{
-      background-image: url(features/360_F_269275503_fL3Dx8hgvCDgrnuvbm8XLPHJ461QIM4o.jpg);
+      background-image: url(../images/features/360_F_269275503_fL3Dx8hgvCDgrnuvbm8XLPHJ461QIM4o.jpg);
       
   }
   
@@ -278,7 +278,7 @@ ul{
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
-    /* background-image: url("./images/aa.jpg"); */
+    /* background-image: url("../images/aa.jpg"); */
     /* clip-path: polygon(0 0,100% 0 ,100% 100%,75% 85%,0% 100%); */
 }
 .row{
@@ -331,7 +331,7 @@ ul{
     color: rgb(1,28,29);
 }
 #about-head{
-    background-image: url(./features/about-us-background-images-for-website-9-1.jpg);
+    background-image: url(../images/features/about-us-background-images-for-website-9-1.jpg);
 }
 #page-header{
     background-color: #b8c5c4;
