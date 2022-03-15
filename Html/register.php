@@ -1,3 +1,44 @@
+<?php 
+
+include 'config.php';
+
+error_reporting(0);
+
+session_start();
+
+if (isset($_SESSION['name'])) {
+    header("Location: account.php");
+}
+
+if (isset($_POST['submit'])) {
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$password = md5($_POST['password']);
+
+	if (1) {
+		$sql = "SELECT * FROM p_user WHERE email='$email'";
+		$result = mysqli_query($conn, $sql);
+		if (!$result->num_rows > 0) {
+			$sql = "INSERT INTO p_user (name, email, password)
+					VALUES ('$name', '$email', '$password')";
+			$result = mysqli_query($conn, $sql);
+			if ($result) {
+				echo "<script>alert('Wow! User Registration Completed.')</script>";
+				$name = "";
+				$email = "";
+				$_POST['password'] = "";
+			} else {
+				echo "<script>alert('Woops! Something Wrong Went.')</script>";
+			}
+		} else {
+			echo "<script>alert('Woops! Email Already Exists.')</script>";
+		}
+		
+	} 
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +50,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="../javascript/toggle menu.js"></script>
-    <script src="../javascript/toggle.js"></script>
+    <script src="./javascript/toggle menu.js"></script>
+    <script src="./javascript/toggle.js"></script>
 
 </head>
 <body>
@@ -24,15 +65,15 @@
                     <img src="../images/RB 5@4x.png" alt="" width="150px" height="65px">
                 </div>
                 <nav>
-                    <ul id="MenuItems">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="./product.html">Products</a></li>
-                        <li><a href="./about.html">About</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
-                        <li><a href="./account.html">Account</a></li>
-                    </ul>
+                <ul id="MenuItems">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.php">Account</a></li>
+                </ul>
                 </nav>
-                <a href="./cart.html">
+                <a href="cart.html">
                 <img src="../images/cart_icon-removebg-preview.png" alt="" height="30px" width="30px">
                 <img src="../images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
                  </a>
@@ -43,29 +84,26 @@
                     <h1 class="glow" id="text3d">Don't Forget The 3R!<br>Reduce,Reuse,Recycle.</h1>
                     <br>
                     <p>Life becomes easier when you always remeber these three magical<br> words. Don't worry. Recycle bin is here for remembering you the 3R.<br>Be smart & enjoy your shopping.</p>
-                    <a href="./product.html" class="btn">Explore Now &#8594;</a>
+                    <a href="" class="btn">Explore Now &#8594;</a>
                 </div>
                 <div class="col-2">
                     <div class="form-container">
                         <div class="form-btn">
-                            <span onclick="login()">Login</span>
-                            <span onclick="register()">Register</span>
-                            <hr id="Indicator">
+                            <span onclick="login()">Register</span>
+                            
                         </div> 
-                        <form id="LoginForm">
-                            <input type="text" placeholder="Username">
-                            <input type="password" placeholder="Password">
-                            <button type="submit" class="btn">Login</button>
-                            <a href="">Forgot password</a>
-                        </form>
-                        <form id="RegForm">
-                           <input type="text" placeholder="Username">
-                           <input type="email" placeholder="Email">
-                           <input type="password" placeholder="Password">
-                           <button type="submit" class="btn">Register</button>
-                           <a href="">Forgot password</a>
-                       </form>
-                   </div> 
+                       
+					   <form action="" method="POST" >
+					        <input type="text" placeholder="Username" name="name" value="<?php echo $name; ?>" required>
+				             <input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
+			                <input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
+			    
+			               
+				               <button name="submit" class="btn">Register</button>
+			            
+			                <p >Have an account? <br> <a href="account.php">Login Here</a>.</p>
+		                </form>
+                      </div> 
                 </div>
             </div>
     </div>
@@ -80,11 +118,11 @@
                 <p>Download App for Android and ios mobile phone.</p>
                 <div class="app-logo">
                     <!-- <img src="./images/app-store.png" alt=""> -->
-                    <img src="../images/play-store.png" alt="">
+                    <img src="./images/play-store.png" alt="">
                 </div>
             </div>
             <div class="footer-col-2">
-                <img src="../images/RB 2@4x.png" alt="">
+                <img src="./images/RB 2@4x.png" alt="">
                 <p>Our Purpose is to make people economic<br> and make their life esier.
                 </p>
 
@@ -114,37 +152,7 @@
         <p class="copyright">Copyright 2022</p>
     </div>
 </div>
- <!-- ---------------Js for toogle Menu------------- -->
- <script>
-    var MenuItems = document.getElementById("MenuItems");
-    MenuItems.style.maxHeight = "0px";
-    function menutoggle() {
-        if (MenuItems.style.maxHeight == "0px") {
-            MenuItems.style.maxHeight = "200px";
-        }
-        else {
-            MenuItems.style.maxHeight = "0px";
-        }
-    }
-</script>
-
-<!-----toggle form-->
-<script>
-    var LoginForm = document.getElementById("LoginForm");
-   var RegForm = document.getElementById("RegForm");
-   var Indicator = document.getElementById("Indicator");
-   function register(){
-       RegForm.style.transform="translateX(0px)";
-       LoginForm.style.transform="translateX(0px)";
-       Indicator.style.transform="translateX(100px)";
-    }
-    function login(){
-       RegForm.style.transform="translateX(300px)";
-       LoginForm.style.transform="translateX(300px)";
-       Indicator.style.transform="translateX(0px)";
-
-    }
-</script>
+ 
 
 </body>
 </html>
