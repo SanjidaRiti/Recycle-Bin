@@ -118,11 +118,11 @@ if (isset($_POST['submit'])) {
                 <p>Download App for Android and ios mobile phone.</p>
                 <div class="app-logo">
                     <!-- <img src="./images/app-store.png" alt=""> -->
-                    <img src="./images/play-store.png" alt="">
+                    <img src="../images/play-store.png" alt="">
                 </div>
             </div>
             <div class="footer-col-2">
-                <img src="./images/RB 2@4x.png" alt="">
+                <img src="../images/RB 2@4x.png" alt="">
                 <p>Our Purpose is to make people economic<br> and make their life esier.
                 </p>
 
