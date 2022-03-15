@@ -43,7 +43,7 @@ p{
     /* clip-path: polygon(0 0,100% 0 ,100% 100%,75% 85%,0% 100%); */
 }
 .bg{
-    background-image: url("./images/aa.jpg");
+    background-image: url("../images/aa.jpg");
     height: 750px;
     background-position: center;
     background-repeat: no-repeat;
